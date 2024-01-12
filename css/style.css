@@ -21,8 +21,8 @@ body {
   align-items: center;
 }
 
-/* ================================================== */
 /* NAVIGATOR STYLES */
+/* ================================================== */
 .navigator {
   position: fixed;
   top: 0;
@@ -92,18 +92,18 @@ body {
   transition: 0.5s;
 }
 
-/* ================================================== */
 /* HERO STYLES */
+/* ================================================== */
 .hero {
   width: 100%;
-  height: 36.5625rem;
+  height: 100vh;
   background: url(../images/hero/BG.png), #201c13 50% / cover no-repeat;
   display: grid;
   grid-template-columns: 35% 30% 35%;
-  grid-template-rows: 17% repeat(3, 22%) 17%;
+  grid-template-rows: 17% repeat(3, 22%) 16%;
 }
 
-.hero > .hero-title {
+.hero-title {
   grid-column: 1/2;
   grid-row: 3/4;
   color: #c1ab81;
@@ -118,7 +118,7 @@ body {
   cursor: default;
 }
 
-.hero > .hero-btn {
+.hero-btn {
   grid-column: 1/2;
   grid-row: 4/5;
   width: 7.5rem;
@@ -141,17 +141,17 @@ body {
   cursor: pointer;
 }
 
-.hero > .hero-img {
+.hero-img {
   grid-column: 2/3;
   grid-row: 2/5;
   margin: 0 auto;
 }
 
-.hero > .hero-img > img {
+.hero-img > img {
   height: 100%;
 }
 
-.hero > .hero-img-grp {
+.hero-img-grp {
   grid-column: 3/4;
   grid-row: 3/4;
   width: 90%;
@@ -160,11 +160,11 @@ body {
   align-items: center;
 }
 
-.hero > .hero-img-grp > img {
+.hero-img-grp > img {
   height: 100%;
 }
 
-.hero > .hero-arrow-grp {
+.hero-arrow-grp {
   grid-column: 3/4;
   grid-row: 4/5;
   margin: auto auto 0;
@@ -174,8 +174,135 @@ body {
   gap: 1rem;
 }
 
-.hero > .hero-arrow-grp > img {
+.hero-arrow-grp > img {
   cursor: pointer;
+}
+
+/* ABOUT STYLES */
+/* ================================================== */
+.about {
+  width: 100%;
+  height: 100vh;
+  background: #efe9dd;
+  padding: 6rem 0;
+}
+
+.about-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-main-cntr {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: stretch; */
+}
+
+.about-img-side {
+  width: 41%;
+}
+
+.about-text-side {
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.about-small-tiitle {
+  color: #222;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5625rem; /* 156.25% */
+  text-transform: capitalize;
+}
+
+.about-big-title {
+  color: #9d875c;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Italiana", sans-serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.about-markdown {
+  color: #222;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5625rem; /* 156.25% */
+}
+
+.about-text {
+  color: #222;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.375rem; /* 137.5% */
+}
+
+.about-btn {
+  width: 7.5rem;
+  height: 2.5rem;
+  background: #c1ab81;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #c1ab81;
+  border-radius: 1.25rem;
+  color: #222;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5625rem; /* 156.25% */
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.about-secondary-cntr {
+  width: 62.5%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2.2rem;
+  padding-bottom: 2.2rem;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.about-card-img {
+  cursor: pointer;
+}
+
+.about-card-text {
+  color: #222;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Italiana;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-top: 0.3rem;
 }
 
 /* ================================================== */
@@ -189,7 +316,8 @@ body {
   border: 2px solid #fff;
 }
 
-.hero > .hero-btn:hover {
+.hero-btn:hover,
+.about-btn:hover {
   color: #fff;
   border: 2px solid #fff;
 }
