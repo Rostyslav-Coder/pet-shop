@@ -24,6 +24,8 @@ body {
 /* ================================================== */
 /* NAVIGATOR STYLES */
 .navigator {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 5rem;
   background: linear-gradient(180deg, #111 0%, #44444400 100%);
@@ -41,7 +43,7 @@ body {
 
 .navigator > .nav-wrapper > .nav > .nav-btn {
   color: #c1ab81;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 500;
@@ -61,6 +63,7 @@ body {
   font-weight: 900;
   line-height: 2.5rem; /* 100% */
   letter-spacing: 0.3125rem;
+  cursor: default;
 }
 
 .navigator > .nav-wrapper > .register {
@@ -68,9 +71,8 @@ body {
 }
 
 .navigator > .nav-wrapper > .register > .register-btn {
-  color: var(--c-1-b-081, #c1ab81);
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Montserrat;
+  color: #c1ab81;
+  font-family: "Montserrat", serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 500;
@@ -91,14 +93,103 @@ body {
 }
 
 /* ================================================== */
+/* HERO STYLES */
+.hero {
+  width: 100%;
+  height: 36.5625rem;
+  background: url(../images/hero/BG.png), #201c13 50% / cover no-repeat;
+  display: grid;
+  grid-template-columns: 35% 30% 35%;
+  grid-template-rows: 17% repeat(3, 22%) 17%;
+}
+
+.hero > .hero-title {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  color: #c1ab81;
+  font-family: "Italiana", sans-serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 400;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: 4rem; /* 100% */
+  text-align: right;
+  text-transform: capitalize;
+  cursor: default;
+}
+
+.hero > .hero-btn {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  width: 7.5rem;
+  height: 2.5rem;
+  margin-left: 10%;
+  padding: 0.75rem 1.25rem;
+  border: 2px solid #c1ab81;
+  border-radius: 1.5rem;
+  color: #c1ab81;
+  font-family: "Montserrat", serif;
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: 500;
+  font-feature-settings: "clig" off, "liga" off;
+  line-height: 1rem; /* 100% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.hero > .hero-img {
+  grid-column: 2/3;
+  grid-row: 2/5;
+  margin: 0 auto;
+}
+
+.hero > .hero-img > img {
+  height: 100%;
+}
+
+.hero > .hero-img-grp {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero > .hero-img-grp > img {
+  height: 100%;
+}
+
+.hero > .hero-arrow-grp {
+  grid-column: 3/4;
+  grid-row: 4/5;
+  margin: auto auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero > .hero-arrow-grp > img {
+  cursor: pointer;
+}
+
+/* ================================================== */
 .navigator > .nav-wrapper > .nav > .hover-btn:hover,
-.navigator > .nav-wrapper > .register > .hover-btn:hover,
-.navigator > .nav-wrapper > .nav > .hover-btn:active,
-.navigator > .nav-wrapper > .register > .hover-btn:active {
+.navigator > .nav-wrapper > .register > .hover-btn:hover {
   text-decoration: underline;
   color: #fff;
 }
 
 .navigator > .nav-wrapper > .register > .contact-btn:hover {
+  border: 2px solid #fff;
+}
+
+.hero > .hero-btn:hover {
+  color: #fff;
   border: 2px solid #fff;
 }
