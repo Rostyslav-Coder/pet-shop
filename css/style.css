@@ -26,7 +26,7 @@
   display: none;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 600px) {
   .header {
     display: block;
     width: 100%;
@@ -160,7 +160,7 @@
   align-items: center;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 600px) {
   .hero {
     padding: 0;
     background-image: url(../images/hero/hero-bg.png);
@@ -203,9 +203,10 @@
 
 .about {
   width: 100%;
+  min-height: 100vh;
   padding: 10% 0;
   background-color: var(--white-linen, #efe9dd);
-  background-image: url(../images/about/about-bg-img.png);
+  background-image: url(../images/product/product-bd-img.png);
   background-repeat: no-repeat;
   background-size: 100% 60%;
 }
@@ -341,7 +342,7 @@
   font-feature-settings: "clig" off, "liga" off;
 }
 
-@media (min-width: 601px) {
+@media (min-width: 600px) {
   .about {
     background-size: 50% 100%;
   }
@@ -361,5 +362,152 @@
   }
   .about-logo {
     flex-direction: row;
+  }
+}
+
+/* Product Styles */
+/* ================================================== */
+
+.product {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10% 0;
+  background-color: var(--white-linen, #efe9dd);
+  background-image: url(../images/about/about-bg-img.png);
+  background-repeat: no-repeat;
+  background-size: 100% 60%;
+}
+
+.product-wrapper {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.product-text-side {
+  height: 24.6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.product-sml-title {
+  color: var(--black, #222220);
+  font-family: "Montserrat", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  font-feature-settings: "clig" off, "liga" off;
+}
+
+.product-big-title {
+  color: var(--cafe-au-lait, #9d875c);
+  font-family: "Italiana", sans-serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+  font-feature-settings: "clig" off, "liga" off;
+}
+
+.product-text {
+  color: var(--black, #222220);
+  font-family: "Montserrat", serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: justify;
+  font-feature-settings: "clig" off, "liga" off;
+}
+
+.product-card-side {
+  display: flex;
+  height: 70.5%;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product-card {
+  width: 47%;
+  height: 47%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-card-img {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pavlova, #c1ab81);
+  background-image: url(../images/product/product-card-bg.png);
+  background-size: cover;
+  aspect-ratio: 1/1;
+}
+
+.product-card-img > img {
+  width: 100%;
+}
+
+.product-card-name {
+  color: var(--black, #222220);
+  font-family: "Italiana", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-feature-settings: "clig" off, "liga" off;
+}
+
+.product-card-price {
+  color: var(--black, #222220);
+  font-family: "Montserrat", serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-feature-settings: "clig" off, "liga" off;
+}
+
+.stars {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .product {
+    background-position: right;
+    background-size: 50% 100%;
+  }
+  .product-wrapper {
+    gap: 1rem;
+  }
+  .product-text-side {
+    height: 12%;
+    gap: 0;
+  }
+  .product-card {
+    width: 21%;
+    gap: 0;
   }
 }
