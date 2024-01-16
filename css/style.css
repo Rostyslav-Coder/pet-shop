@@ -6,13 +6,81 @@
 
 :root {
   --black: #222220;
+  --header-bg: #22222099;
   --pavlova: #c1ab81;
+  --buttermilk: #f9e59f;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Header Styles */
+/* ================================================== */
+
+.header {
+  display: none;
+}
+
+@media (min-width: 601px) {
+  .header {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    background-color: var(--header-bg, #22222099);
+    flex-shrink: 0;
+  }
+  .header-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .nav-btns,
+  .register-btns {
+    width: 38%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-logo {
+    width: 20%;
+    color: var(--buttermilk, #f9e59f);
+    font-family: "Italiana", sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    text-transform: capitalize;
+    font-feature-settings: "clig" off, "liga" off;
+  }
+  .nav-btn {
+    color: var(--buttermilk, #f9e59f);
+    font-family: "Montserrat", serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-feature-settings: "clig" off, "liga" off;
+  }
+  .border {
+    width: 6rem;
+    height: 2rem;
+    border-radius: 1.25rem;
+    border: 2px solid var(--buttermilk, #f9e59f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* Hero Styles */
