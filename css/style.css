@@ -89,7 +89,8 @@
 
 .about,
 .product,
-.service-hero {
+.service-hero,
+.service {
   width: 100%;
   min-height: 100vh;
   padding: 10% 0;
@@ -98,7 +99,8 @@
 
 .about-wrapper,
 .product-wrapper,
-.service-hero-wrapper {
+.service-hero-wrapper,
+.service-wrapper {
   width: 80%;
   height: 100%;
   margin: 0 auto;
@@ -141,7 +143,8 @@
 
 .about-big-title,
 .product-big-title,
-.service-big-title {
+.service-big-title,
+.service-text-grp > .service-text {
   color: var(--cafe-au-lait, #9d875c);
   font-family: "Italiana", sans-serif;
   font-size: 1.5rem;
@@ -367,7 +370,7 @@
 .service-hero {
   padding: 20% 0;
   background-color: var(--black, #222220);
-  background-image: url(../images/service/service-hero-bg-img.png);
+  background-image: url(../images/service-hero/service-hero-bg-img.png);
   background-size: 65% 30%;
   background-position: top right;
 }
@@ -386,6 +389,40 @@
 
 .service-text {
   color: var(--white-linen, #efe9dd);
+}
+
+/* Service Styles */
+/* ================================================== */
+
+.service {
+  background-color: var(--white-linen, #efe9dd);
+  background-image: url(../images/service/service-bg-img.png);
+  background-size: 100% 80%;
+  background-position: top 10%;
+}
+
+.service-wrapper {
+  gap: 1.5rem;
+}
+
+.service-img-grp {
+  width: 100%;
+  display: flex;
+  gap: 10%;
+}
+
+.service-img {
+  width: 55%;
+}
+
+.service-img > img {
+  width: 100%;
+}
+
+.service-text-grp {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Mobile Horizontal Styles */
@@ -551,5 +588,29 @@
   .service-hero-text-side {
     width: 45%;
     gap: 0.5rem;
+  }
+}
+
+/* Service Hero Styles */
+@media (min-width: 600px) {
+  .service {
+    background-size: 50% 100%;
+    background-position: right 50%;
+  }
+  .service-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0;
+    row-gap: 0.5rem;
+  }
+  .service-img-grp {
+    width: 48%;
+    height: 40vh;
+  }
+  .service-img {
+    width: 45%;
+  }
+  .service-text-grp {
+    width: 45%;
   }
 }
