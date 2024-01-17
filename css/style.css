@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Italiana:regular);
+
 @import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
 
 /* Basic Styles */
@@ -24,65 +25,6 @@
 
 .header {
   display: none;
-}
-
-@media (min-width: 600px) {
-  .header {
-    display: block;
-    width: 100%;
-    height: 3rem;
-    position: fixed;
-    top: 0;
-    overflow: hidden;
-    background-color: var(--header-bg, #22222099);
-    flex-shrink: 0;
-  }
-  .header-wrapper {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-  }
-  .nav-btns,
-  .register-btns {
-    width: 38%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .header-logo {
-    width: 20%;
-    color: var(--buttermilk, #f9e59f);
-    font-family: "Italiana", sans-serif;
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-align: center;
-    text-transform: capitalize;
-    font-feature-settings: "clig" off, "liga" off;
-  }
-  .nav-btn {
-    color: var(--buttermilk, #f9e59f);
-    font-family: "Montserrat", serif;
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    text-decoration: none;
-    text-transform: capitalize;
-    font-feature-settings: "clig" off, "liga" off;
-  }
-  .border {
-    width: 6rem;
-    height: 2rem;
-    border-radius: 1.25rem;
-    border: 2px solid var(--buttermilk, #f9e59f);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
 }
 
 /* Hero Styles */
@@ -121,24 +63,6 @@
   font-feature-settings: "clig" off, "liga" off;
 }
 
-.hero-btn {
-  width: 7.5rem;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid var(--pavlova, #c1ab81);
-  border-radius: 1.25rem;
-  color: var(--pavlova, #c1ab81);
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: "Montserrat", serif;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-transform: capitalize;
-}
-
 .hero-img-main > img {
   width: 100%;
 }
@@ -160,59 +84,23 @@
   align-items: center;
 }
 
-@media (min-width: 600px) {
-  .hero {
-    padding: 0;
-    background-image: url(../images/hero/hero-bg.png);
-  }
-  .hero-wrapper {
-    width: 90%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 29.5% 5.6% 29.8% 5.6% 29.5%;
-    grid-template-rows: repeat(4, 25%);
-  }
-  .hero-title {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    z-index: 2;
-  }
-  .hero-btn {
-    grid-column: 1/2;
-    grid-row: 3/4;
-    margin-top: auto;
-  }
-  .hero-img-main {
-    grid-column: 2/5;
-    grid-row: 1/5;
-    margin: auto;
-  }
-  .hero-image-grp {
-    grid-column: 4/6;
-    grid-row: 2/3;
-  }
-  .hero-arrow-grp {
-    grid-column: 4/6;
-    grid-row: 3/4;
-    margin: auto auto 0;
-  }
-}
-
-/* About Styles */
+/* Template Styles */
 /* ================================================== */
 
-.about {
+.about,
+.product,
+.service-hero {
   width: 100%;
   min-height: 100vh;
   padding: 10% 0;
-  background-color: var(--white-linen, #efe9dd);
-  background-image: url(../images/product/product-bd-img.png);
   background-repeat: no-repeat;
-  background-size: 100% 60%;
 }
 
-.about-wrapper {
+.about-wrapper,
+.product-wrapper,
+.service-hero-wrapper {
   width: 80%;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -221,22 +109,17 @@
   gap: 3rem;
 }
 
-.about-main-grp {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-}
-
-.about-img-side > img {
+.about-img-side > img,
+.service-hero-img-side > img {
   width: 100%;
   border: 2px solid var(--cafe-au-lait, #9d875c);
   outline: 2px solid var(--cafe-au-lait, #9d875c);
   outline-offset: 5px;
 }
 
-.about-text-side {
+.about-text-side,
+.product-text-side,
+.service-hero-text-side {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -244,8 +127,9 @@
   gap: 1.5rem;
 }
 
-.about-sml-title {
-  color: var(--black, #222220);
+.about-sml-title,
+.product-sml-title,
+.service-sml-title {
   font-family: "Montserrat", serif;
   font-size: 1rem;
   font-style: normal;
@@ -255,7 +139,9 @@
   font-feature-settings: "clig" off, "liga" off;
 }
 
-.about-big-title {
+.about-big-title,
+.product-big-title,
+.service-big-title {
   color: var(--cafe-au-lait, #9d875c);
   font-family: "Italiana", sans-serif;
   font-size: 1.5rem;
@@ -266,8 +152,8 @@
   font-feature-settings: "clig" off, "liga" off;
 }
 
-.about-markdown {
-  color: var(--black, #222220);
+.about-markdown,
+.service-markdown {
   font-family: "Montserrat", serif;
   font-size: 1.125rem;
   font-style: italic;
@@ -276,8 +162,9 @@
   font-feature-settings: "clig" off, "liga" off;
 }
 
-.about-text {
-  color: var(--black, #222220);
+.about-text,
+.product-text,
+.service-text {
   font-family: "Montserrat", serif;
   font-size: 1.125rem;
   font-style: normal;
@@ -287,12 +174,60 @@
   font-feature-settings: "clig" off, "liga" off;
 }
 
+.hero-btn,
+.service-btn {
+  width: 7.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--pavlova, #c1ab81);
+  border-radius: 1.25rem;
+  color: var(--pavlova, #c1ab81);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "Montserrat", serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
 .about-btn {
   width: 7.5rem;
   height: 2.5rem;
   background-color: var(--pavlova, #c1ab81);
   background-image: url(../images/about/about-btn.png);
   border-radius: 1.25rem;
+}
+
+/* About Styles */
+/* ================================================== */
+
+.about {
+  background-color: var(--white-linen, #efe9dd);
+  background-image: url(../images/product/product-bd-img.png);
+  background-size: 100% 60%;
+}
+
+.about-main-grp {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.about-sml-title {
+  color: var(--black, #222220);
+}
+
+.about-markdown {
+  color: var(--black, #222220);
+}
+
+.about-text {
+  color: var(--black, #222220);
 }
 
 .about-sec-grp {
@@ -342,93 +277,25 @@
   font-feature-settings: "clig" off, "liga" off;
 }
 
-@media (min-width: 600px) {
-  .about {
-    background-size: 50% 100%;
-  }
-  .about-wrapper {
-    gap: 1rem;
-  }
-  .about-main-grp {
-    flex-direction: row;
-    align-items: start;
-  }
-  .about-img-side {
-    width: 45%;
-  }
-  .about-text-side {
-    width: 45%;
-    gap: 0.5rem;
-  }
-  .about-logo {
-    flex-direction: row;
-  }
-}
-
 /* Product Styles */
 /* ================================================== */
 
 .product {
-  width: 100%;
-  min-height: 100vh;
-  padding: 10% 0;
   background-color: var(--white-linen, #efe9dd);
   background-image: url(../images/about/about-bg-img.png);
-  background-repeat: no-repeat;
   background-size: 100% 60%;
 }
 
-.product-wrapper {
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 3rem;
-}
-
 .product-text-side {
-  height: 24.6%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
 }
 
 .product-sml-title {
   color: var(--black, #222220);
-  font-family: "Montserrat", serif;
-  font-size: 1rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  text-transform: uppercase;
-  font-feature-settings: "clig" off, "liga" off;
-}
-
-.product-big-title {
-  color: var(--cafe-au-lait, #9d875c);
-  font-family: "Italiana", sans-serif;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-transform: capitalize;
-  font-feature-settings: "clig" off, "liga" off;
 }
 
 .product-text {
   color: var(--black, #222220);
-  font-family: "Montserrat", serif;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-align: justify;
-  font-feature-settings: "clig" off, "liga" off;
 }
 
 .product-card-side {
@@ -494,6 +361,160 @@
   width: 100%;
 }
 
+/* Service-Hero Styles */
+/* ================================================== */
+
+.service-hero {
+  padding: 20% 0;
+  background-color: var(--black, #222220);
+  background-image: url(../images/service/service-hero-bg-img.png);
+  background-size: 65% 30%;
+  background-position: top right;
+}
+
+.service-hero-img-side > img {
+  aspect-ratio: 1/1;
+}
+
+.service-sml-title {
+  color: var(--white-linen, #efe9dd);
+}
+
+.service-markdown {
+  color: var(--white-linen, #efe9dd);
+}
+
+.service-text {
+  color: var(--white-linen, #efe9dd);
+}
+
+/* Mobile Horizontal Styles */
+/* ================================================== */
+
+/* Header Styles */
+@media (min-width: 600px) {
+  .header {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    background-color: var(--header-bg, #22222099);
+    flex-shrink: 0;
+  }
+  .header-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  .nav-btns,
+  .register-btns {
+    width: 38%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-logo {
+    width: 20%;
+    color: var(--buttermilk, #f9e59f);
+    font-family: "Italiana", sans-serif;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    text-transform: capitalize;
+    font-feature-settings: "clig" off, "liga" off;
+  }
+  .nav-btn {
+    color: var(--buttermilk, #f9e59f);
+    font-family: "Montserrat", serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-feature-settings: "clig" off, "liga" off;
+  }
+  .border {
+    width: 6rem;
+    height: 2rem;
+    border-radius: 1.25rem;
+    border: 2px solid var(--buttermilk, #f9e59f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Hero Styles */
+@media (min-width: 600px) {
+  .hero {
+    padding: 0;
+    background-image: url(../images/hero/hero-bg.png);
+  }
+  .hero-wrapper {
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 29.5% 5.6% 29.8% 5.6% 29.5%;
+    grid-template-rows: repeat(4, 25%);
+  }
+  .hero-title {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    z-index: 2;
+  }
+  .hero-btn {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-top: auto;
+  }
+  .hero-img-main {
+    grid-column: 2/5;
+    grid-row: 1/5;
+    margin: auto;
+  }
+  .hero-image-grp {
+    grid-column: 4/6;
+    grid-row: 2/3;
+  }
+  .hero-arrow-grp {
+    grid-column: 4/6;
+    grid-row: 3/4;
+    margin: auto auto 0;
+  }
+}
+
+/* About Styles */
+@media (min-width: 600px) {
+  .about {
+    background-size: 50% 100%;
+  }
+  .about-wrapper {
+    gap: 1rem;
+  }
+  .about-main-grp {
+    flex-direction: row;
+    align-items: start;
+  }
+  .about-img-side {
+    width: 45%;
+  }
+  .about-text-side {
+    width: 45%;
+    gap: 0.5rem;
+  }
+  .about-logo {
+    flex-direction: row;
+  }
+}
+
+/* Product Styles */
 @media (min-width: 600px) {
   .product {
     background-position: right;
@@ -509,5 +530,26 @@
   .product-card {
     width: 21%;
     gap: 0;
+  }
+}
+
+/* Service Hero Styles */
+@media (min-width: 600px) {
+  .service-hero {
+    background-size: 22% 40%;
+    padding: 10% 0;
+  }
+  .service-hero-wrapper {
+    flex-direction: row;
+  }
+  .service-hero-img-side {
+    width: 45%;
+  }
+  .service-hero-img-side > img {
+    width: 80%;
+  }
+  .service-hero-text-side {
+    width: 45%;
+    gap: 0.5rem;
   }
 }
