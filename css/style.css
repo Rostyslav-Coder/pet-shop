@@ -90,7 +90,8 @@
 .about,
 .product,
 .service-hero,
-.service {
+.service,
+.contact {
   width: 100%;
   min-height: 100vh;
   padding: 10% 0;
@@ -100,7 +101,8 @@
 .about-wrapper,
 .product-wrapper,
 .service-hero-wrapper,
-.service-wrapper {
+.service-wrapper,
+.contact-wrapper {
   width: 80%;
   height: 100%;
   margin: 0 auto;
@@ -121,7 +123,8 @@
 
 .about-text-side,
 .product-text-side,
-.service-hero-text-side {
+.service-hero-text-side,
+.contact-text-side {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -131,7 +134,8 @@
 
 .about-sml-title,
 .product-sml-title,
-.service-sml-title {
+.service-sml-title,
+.contact-sml-title {
   font-family: "Montserrat", serif;
   font-size: 1rem;
   font-style: normal;
@@ -144,7 +148,8 @@
 .about-big-title,
 .product-big-title,
 .service-big-title,
-.service-text-grp > .service-text {
+.service-text-grp > .service-text,
+.contact-big-title {
   color: var(--cafe-au-lait, #9d875c);
   font-family: "Italiana", sans-serif;
   font-size: 1.5rem;
@@ -167,7 +172,8 @@
 
 .about-text,
 .product-text,
-.service-text {
+.service-text,
+.contact-text {
   font-family: "Montserrat", serif;
   font-size: 1.125rem;
   font-style: normal;
@@ -209,7 +215,7 @@
 
 .about {
   background-color: var(--white-linen, #efe9dd);
-  background-image: url(../images/product/product-bd-img.png);
+  background-image: url(../images/about/about-bg-img.png);
   background-size: 100% 60%;
 }
 
@@ -285,7 +291,7 @@
 
 .product {
   background-color: var(--white-linen, #efe9dd);
-  background-image: url(../images/about/about-bg-img.png);
+  background-image: url(../images/product/product-bd-img.png);
   background-size: 100% 60%;
 }
 
@@ -425,6 +431,50 @@
   flex-direction: column;
 }
 
+/* Contact Styles */
+/* ================================================== */
+
+.contact {
+  background-image: linear-gradient(
+    180deg,
+    #c1ab81 0%,
+    #c1ab81 8.57%,
+    #efe9dd 8.57%,
+    #efe9dd 100%
+  );
+}
+
+.contact-img-side {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 35% 15% 15% 35%;
+}
+
+.contact-img-side > .cnt-first {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+.contact-img-side > .cnt-second {
+  grid-column: 1/2;
+  grid-row: 3/5;
+}
+
+.contact-img-side > .cnt-therd {
+  grid-column: 1/2;
+  grid-row: 2/4;
+  margin: auto auto auto 0;
+  z-index: 2;
+}
+
+.contact-sml-title {
+  color: var(--black, #222220);
+}
+
+.contact-text {
+  color: var(--black, #222220);
+}
+
 /* Mobile Horizontal Styles */
 /* ================================================== */
 
@@ -530,6 +580,7 @@
 /* About Styles */
 @media (min-width: 600px) {
   .about {
+    padding: 7% 0;
     background-size: 50% 100%;
   }
   .about-wrapper {
@@ -554,6 +605,7 @@
 /* Product Styles */
 @media (min-width: 600px) {
   .product {
+    padding: 7% 0;
     background-position: right;
     background-size: 50% 100%;
   }
@@ -612,5 +664,29 @@
   }
   .service-text-grp {
     width: 45%;
+  }
+}
+
+/* Contact Styles */
+@media (min-width: 600px) {
+  .contact {
+    background-image: linear-gradient(
+      180deg,
+      #c1ab81 0%,
+      #c1ab81 20%,
+      #efe9dd 20%,
+      #efe9dd 100%
+    );
+    padding: 7% 0;
+  }
+  .contact-wrapper {
+    flex-direction: row;
+  }
+  .contact-img-side {
+    max-height: 80vh;
+  }
+  .contact-img-side > img {
+    width: auto;
+    height: 100%;
   }
 }
